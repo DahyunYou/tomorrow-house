@@ -1,0 +1,78 @@
+@mixin text-style-12($color: false) {
+  font-size: $font-size-12;
+  line-height: $line-height-12;
+  letter-spacing: $letter-spacing-12;
+
+  /* 만약 컬러라는 변수가($color) false가 아니라면 그때 color를 선언해주겠다!
+  @if ($color != false) {
+    color: $color;
+  } */
+
+  /* $ color라고 받은 인자가 color인지를 확인
+  type-of 함수를 통해서 color가 맞을 경우에만 실행을 시키겠다!(유효성 검사, validation check)
+  
+  @if (type-of($color) == color) {
+    color: $color;
+  }
+  */
+}
+
+@mixin text-style-13() {
+  font-size: $font-size-13;
+  line-height: $line-height-13;
+  letter-spacing: $letter-spacing-13;
+}
+
+@mixin text-style-14() {
+  font-size: $font-size-14;
+  line-height: $line-height-14;
+  letter-spacing: $letter-spacing-14;
+}
+
+@mixin text-style-16() {
+  font-size: $font-size-16;
+  line-height: $line-height-16;
+  letter-spacing: $letter-spacing-16;
+}
+
+@mixin text-style-18() {
+  font-size: $font-size-18;
+  line-height: $line-height-18;
+  letter-spacing: $letter-spacing-18;
+}
+
+@mixin text-style-24() {
+  font-size: $font-size-24;
+  line-height: $line-height-24;
+  letter-spacing: $letter-spacing-24;
+}
+
+@mixin text-style($size, $color: false) {
+  @if ($size == 12) {
+    @include text-style-12;
+  }
+
+  @if ($size == 13) {
+    @include text-style-13;
+  }
+
+  @if ($size == 14) {
+    @include text-style-14;
+  }
+
+  @if ($size == 16) {
+    @include text-style-16;
+  }
+
+  @if ($size == 18) {
+    @include text-style-18;
+  }
+
+  @if ($size == 24) {
+    @include text-style-24;
+  }
+
+  @if (type-of($color) == color) {
+    color: $color;
+  }
+}
