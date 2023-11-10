@@ -1,0 +1,14 @@
+@mixin responsive($screen) {
+  @if ($screen == 'T') {
+    @media screen and (min-width: $md-breakpoint) {
+      // @mixin을 사용해서 새로운 컨텐트를 넣어주고 싶을 때 @content라는 인자를 넣어줌.
+      @content;
+    }
+  }
+
+  @if ($screen == 'D') {
+    @media screen and (min-width: $lg-breakpoint) {
+      @content;
+    }
+  }
+}
